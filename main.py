@@ -8,6 +8,6 @@ response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 
-body = soup.find_all('body')
+body = soup.find('body')
 
-print(body)
+print(body.prettify())
